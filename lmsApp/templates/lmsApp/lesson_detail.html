@@ -20,21 +20,16 @@
         </div>
     </div>
 </div>
-<script>
-function goBack() {
-    history.back();
-}
-</script>
 {% endblock %}
 
-{% block extra_css %}
+{% block additional_styles %}
 <style>
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-                background-image: url('{% static "images/image.jpg" %}');
-        background-size: cover;
-        background-position: center;
+    background-image: url('{% static "images/image.jpg" %}');
+    background-size: cover;
+    background-position: center;
 }
 
 .container {
@@ -123,7 +118,7 @@ body {
 }
 
 .week a:hover {
-    color: white; /* Link üzerindeyken rengin değişmemesi için */
+    color: white;
 }
 </style>
 {% endblock %}

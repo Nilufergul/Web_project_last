@@ -1,5 +1,16 @@
 {% extends 'main.html' %}
 
+{% block content %}
+    <div class="form-container">
+        <h2>Create Lesson</h2>
+        <form method="post" action="">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+{% endblock %}
+
 {% block additional_styles %}
     <style>
 body {
@@ -70,15 +81,4 @@ body {
     background-color: #8bcb00;
 }
     </style>
-{% endblock %}
-
-{% block content %}
-    <div class="form-container">
-        <h2>Create Lesson</h2>
-        <form method="post" action="">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="Submit">
-        </form>
-    </div>
 {% endblock %}
